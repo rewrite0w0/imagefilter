@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,33 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
 </head>
+
 <body>
 
-
-    <h1>test</h1>
+    <canvas class="canvas"></canvas>
+    <div class="controls">
+        <div class="range">
+            <input type="range" min ="" max = "" value = "" step="" class="range__blur">blur</input>
+            <input type="range" min ="" max = "" value = "" step="" class="range__brightness">brightness</input>
+            <input type="range" min ="" max = "" value = "" step="" class="range__contrast">contrast</input>
+            <input type="range" min ="" max = "" value = "" step="" class="range__grayscale">grayscale</input>
+            <input type="range" min ="" max = "" value = "" step="" class="range__hue">hue</input>
+            <input type="range" min ="" max = "" value = "" step="" class="range__invert">invert</input>
+            <input type="range" min ="" max = "" value = "" step="" class="range__opacity">opacity</input>
+            <input type="range" min ="" max = "" value = "" step="" class="range__saturate">saturate</input>
+            <input type="range" min ="" max = "" value = "" step="" class="range__sepia">sepia</input>
+            
+            
+            <div class="btns">
+                <input class="btn_open" type="file" accept="image/*"></input>
+                <button class="btn_reset">reset</button>
+                <button class="btn_save">save</button>
+            </div>
+        </div>
+    </div>
 
 
     <script src="script.js"></script>
 </body>
+
 </html>
