@@ -2,10 +2,12 @@ const canvas = document.querySelector("canvas");
 const openbtn = document.querySelector(".btn_open");
 const resetbtn = document.querySelector(".btn_reset");
 const savebtn = document.querySelector(".btn_save");
+const openfile = document.querySelector('input[type=file]').files[0];
+const reader = new FileReader();
+const img = new Image();
 
 let CANVAS_HEIGHT;
 let CANVAS_WIDTH;
-
 ctx = canvas.getContext("2d");
 
 function drawImage(image) {
@@ -17,6 +19,41 @@ function drawImage(image) {
     }
     return (ctx.drawImage(image, 0, 0, image.width, image.height));
 }
+
+openbtn.addEventListener(function (e) {
+    reader.onload() = function (e) {
+        img.src = e.target.result;
+        img.onload = function() {
+            drawImage(img);
+        }
+    };
+    reader.readAsDataURL(openfile);
+});
+
+
+// function handleOpenbtn(event) {
+
+
+//     // reader.addEventListener("load", function(){
+//     //     canvas.src = reader.result;
+//     // }, false);
+    
+//     // if (openfile) {
+//     //     reader.readAsDataURL(openfile);
+//     // }
+    
+//     // window.onload = function() {
+//     //     ctx.drawImage(ima)
+//     // }
+//     // let file = event.target.files[0];
+//     // let reader = new FileReader();
+//     // reader.onload = function (event) {
+//     // }
+//     // reader.readAsDataURL(file);
+
+//     console.log("it is open");
+//     // openFile(event);
+// }
 
 function handleSavebtn(event) {
     const image = canvas.toDataURL("image/png");
@@ -38,23 +75,22 @@ function handleResetbtn(event) {
 //     reader.readAsDataURL(file);
 // }
 
-let file_reader = new FileReader();
-console.log(file_reader);
+// let file_reader = new FileReader();
+// console.log(file_reader);
 
-function handleOpenbtn(event) {
-    // let file = input.files[0];
-    // let reader = new FileReader();
-    // reader.readAsDataURL(file)
-    // reader.onload = function() {
-    //     console.log(reader.result);
-    // }
-    // reader.onerror = function() {
-    //     console.log(reader.error);
-    // }
 
-    console.log("it is open");
-    openFile(event);
-}
+// function previewFile() {
+//     const file = document.querySelector("input[type=file").files[0];
+//     const reader = new FileReader();
+
+//     reader.addEventListener("load", () => {
+//         canvas.src = reader.result;
+//     }, false);
+
+//     if (file) {
+//         reader.readAsDataURL(file);
+//     }
+// }
 
 function handleContextMenu(event) {
     event.preventDefault();
