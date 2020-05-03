@@ -9,7 +9,6 @@ function handleRangeChange(event){
     console.log(event.target.value);
     image = new Image();
     console.log(image);
-    
 }
 
 // if(fileRange){
@@ -63,6 +62,14 @@ fileInput.addEventListener("change",open)
 
 function handleContextMenu(event) {
     event.preventDefault();
+}
+
+function handleSavebtn(event) {
+    const image = preview.toDataURL("image/png");
+    const link = document.createElement("a");
+    link.href = image;
+    link.download = "";
+    link.click()
 }
 
 

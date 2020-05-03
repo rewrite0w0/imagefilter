@@ -14,15 +14,15 @@
     <canvas class="canvas"></canvas>
     <div class="controls">
         <div class="range">
-            <input type="range" min ="" max = "" value = "" step="" class="range__blur">blur</input>
-            <input type="range" min ="" max = "" value = "" step="" class="range__brightness">brightness</input>
-            <input type="range" min ="" max = "" value = "" step="" class="range__contrast">contrast</input>
-            <input type="range" min ="" max = "" value = "" step="" class="range__grayscale">grayscale</input>
-            <input type="range" min ="" max = "" value = "" step="" class="range__hue">hue</input>
-            <input type="range" min ="" max = "" value = "" step="" class="range__invert">invert</input>
-            <input type="range" min ="" max = "" value = "" step="" class="range__opacity">opacity</input>
-            <input type="range" min ="" max = "" value = "" step="" class="range__saturate">saturate</input>
-            <input type="range" min ="" max = "" value = "" step="" class="range__sepia">sepia</input>
+            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__blur range_filter">blur</input>
+            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__brightness range_filter">brightness</input>
+            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__contrast range_filter">contrast</input>
+            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__grayscale range_filter">grayscale</input>
+            <input type="range" min ="0" max = "360" value = "0" step="0.1" class="range__hue range_filter">hue</input>
+            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__invert range_filter">invert</input>
+            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__opacity range_filter">opacity</input>
+            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__saturate range_filter">saturate</input>
+            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__sepia range_filter">sepia</input>
             <div class="btns">
                 <input class="btn_open" type="file" accept="image/*"></input>
                 <button class="btn_reset">reset</button>
@@ -32,8 +32,7 @@
     </div>
 
 
-    <!-- <script src="script.js"></script> -->
-    <script src="canvas.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
