@@ -11,7 +11,7 @@ const hue_range = document.querySelector(".range__hue")
 const invert_range = document.querySelector(".range__invert")
 const opacity_range = document.querySelector(".range__opacity")
 const saturate_range = document.querySelector(".range__saturate")
-const filter = document.getElementsByClassName("range_filter");
+const filters_range = document.getElementsByClassName("range_filter");
 
 ctx = canvas.getContext("2d");
 
@@ -53,8 +53,7 @@ function putcanvas(image) {
 //     console.log(canvas.style.filter);
 // }
 //어떻게 밑의 필터된 값을 합칠 수 있지?
-// {/* <canvas class="canvas" width="800" height="800" style="filter: hue-rotate(218.9deg) sepia(20%);"></canvas> */}
-// 위의 형식처럼 추가를 시키는 방법을 찾으면 될 것 같다?
+
 // function range(event){
 //     blur_range = event.target.value;
 //     canvas.style.filter = `blur(${blur_value}px)`
@@ -62,17 +61,88 @@ function putcanvas(image) {
 //     canvas.style.filter = `sepia(${sepia_value}%)`;
 // }
 
+// function filters(){
+//     function blur(){blur_val=event.target.value; canvas.style.cssText = `filter:"blur(${blur_val}px)`};
+//     function sepia(){sepia_val = event.target.value; canvas.style.cssText = `filter:"sepia(${sepia_val}%)`};
+//     return blur + sepia;
+// };
 
-function range_blur(event) {
-    blur_value = event.target.value;
-    canvas.style.filter = `blur(${blur_value}px)`
-    return (canvas.style.filter = `blur(${blur_value}px)`);
+
+// function filtersUpdate(){
+    // canvas.style.filter = `blur(${range_blur}px) brightness(${range_brightness}%) contrast(${range_contrast}%) grayscale(${range_grayscale}%) hue-rotate(${range_hue}deg) invert(${range_invert}%) opacity(${range_opacity}) saturate(${range_saturate}%) sepia(${range_sepia}%)`;
+    // canvas.style.filter = 		
+        // "brightness(" +
+		// brightness +
+		// "%) contrast(" +
+		// contrast +
+		// "%) saturate(" +
+		// saturate +
+		// "%) grayscale(" +
+		// grayscale +
+		// "%) invert(" +
+		// invert +
+		// "%) hue-rotate(" +
+		// huerotate +
+        // "deg) 
+        // "blur(" +
+		// range_blur +
+        // "px)";
+        // opacity(" +
+		// opacity +
+		// "%) sepia(" +
+		// sepia +
+		// "%)";
+    // canvas.style.filter = `blur(${range_blur()}px)`
+    // console.log(range_blur.value);
+    // console.log(canvas.style.filter);
+// }
+// console.log(filtersUpdate);
+function range_blur() {
+    // blur_value = event.target.value;
+    canvas.style.filter = "blur(" + blur_value + "px) brightness(" + brightness_value + "%)";
+
+    // function blurV(e){
+    //     return console.log(blur_value = e.target.value);
+    // }
+    // blurV();
+    // brightness_value = event.target.value;
+
+
+    // canvas.style.filter = `blur(${blur_value}px)`
+    // return (canvas.style.filter = `blur(${blur_value}px)`);
     // localStorage.getItem.apply
+    // console.log(r_value(event));
+    // console.log(brightness_value(event));
+    // canvas.style.filter = `blur(${blur_value}px) brightness(${brightness_value}%)`
+    // canvas.style.filter = "blur(" + blur_value + "px) brightness(" + brightness_value + "%)";
+    //  contrast(${range_contrast}%) grayscale(${range_grayscale}%) hue-rotate(${range_hue}deg) invert(${range_invert}%) opacity(${range_opacity}) saturate(${range_saturate}%) sepia(${range_sepia}%)`
 }
+
+// blur_range.addEventListener('input',function(){
+//     blur_value = range_blur.value;
+//     console.log(range_blur.value);
+//     // console.log(blur_value);
+//     range_blur();
+// })
+
+// brightness_range.addEventListener('input',function(){
+//     brightness_value = range_brightness.value;
+//     console.log(brightness_value);
+//     range_blur();
+// })
+
+
+// console.log(range_blur)
+// console.log(r_blur);
+// console.log(range_brightness);
+// function r_blur(event) {
+//     blur_value = event.target.value;
+//     return r_blur;
+// }
 
 function range_brightness(event) {
     brightness_value = event.target.value;
-    canvas.style.filter = `brightness(${brightness_value}%)`;
+    // canvas.style.filter = `brightness(${brightness_value}%)`;
 }
 
 function range_contrast(event) {
@@ -111,8 +181,8 @@ function range_sepia(event) {
     // console.log(image);
     sepia_value = event.target.value;
     canvas.style.filter = `sepia(${sepia_value}%)`;
-    
-    return canvas.style.filter = `sepia(${sepia_value}%)`;
+
+    // return canvas.style.filter = `sepia(${sepia_value}%)`;
 }
 
 // function ranges(){
@@ -155,7 +225,43 @@ function handleResetbtn(event) {
 //     return range_blur() + range_brightness() + range_contrast() + range_grayscale() + range_hue() + range_invert() + range_opacity() + range_saturate() + range_sepia();
 // }
 
+// function updateFilters() {
+// 	imgture.style.filter =
+// 		"brightness(" +
+// 		brightness +
+// 		"%) contrast(" +
+// 		contrast +
+// 		"%) saturate(" +
+// 		saturate +
+// 		"%) grayscale(" +
+// 		grayscale +
+// 		"%) invert(" +
+// 		invert +
+// 		"%) hue-rotate(" +
+// 		huerotate +
+// 		"deg) blur(" +
+// 		blur +
+// 		"px) opacity(" +
+// 		opacity +
+// 		"%) sepia(" +
+// 		sepia +
+// 		"%)";
+// // }
+// function filtersValue() {
+//     // console.log(event.target.value);
+//     console.log(sepia_range.value);
 
+
+// }
+
+// if(sepia_range){
+
+// }
+
+// function filtersUpdate() {
+//     canvas.style.filter = `blur(${blur_range}px) sepia(${sepia_range}%)`;
+//     // canvas.style.filter =`blur(${blur_value}px) sepia(${sepia_value}%)`;
+// }
 
 
 //우클릭방지
@@ -189,12 +295,16 @@ function ifs() {
     if (resetbtn) {
         resetbtn.addEventListener("click", handleResetbtn);
     }
-    if (range_blur) {
+    if(filters_range) {
+        brightness_range.addEventListener("input", range_blur);
         blur_range.addEventListener("input", range_blur);
     }
-    if (range_brightness) {
-        brightness_range.addEventListener("input", range_brightness);
-    }
+    // if (range_blur) {
+    //     blur_range.addEventListener("input", range_blur);
+    // }
+    // if (range_brightness) {
+    //     brightness_range.addEventListener("input", range_brightness);
+    // }
     if (range_contrast) {
         contrast_range.addEventListener('input', range_contrast);
     }
@@ -216,14 +326,28 @@ function ifs() {
     if (range_sepia) {
         sepia_range.addEventListener('input', range_sepia);
     }
-
+    // if(filters) {
+    //     // filter.addEventListener('input',filters);
+    //     filter.
+    // }
     if (resetbtn) {
         resetbtn.addEventListener("click", handleResetbtn);
     }
+
+    // if(filters){
+    //     filtersUpdate.addEventListener("input",filtersUpdate);
+    // }
     // if (){
     //     ctx.drawImage
     // }
 }
+// console.log(sepia_range.style.setProperty);
+
+// function testing(){
+//     let node = filter.lastChild;
+//     filter.appendChild(node);
+// }
+// console.log()
 
 // function handleFilter(event){
 //     const filters = event.target.style.filter;
@@ -238,6 +362,13 @@ function init() {
     // range_total();    
     // updateFilter();
     // range();
+    // testing();
+    // filters();
+    // console.log(filter);
+    // console.log(range_sepia);
+    // filtersUpdate();
+    // filtersValue();
+    // filtersUpdate();
 }
 
 init();

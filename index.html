@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Filter</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="test.css"> -->
     <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
 </head>
 
@@ -14,17 +15,49 @@
     <canvas class="canvas"></canvas>
     <div class="controls">
         <div class="range">
-            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__blur range_filter">blur</input>
-            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__brightness range_filter">brightness</input>
-            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__contrast range_filter">contrast</input>
-            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__grayscale range_filter">grayscale</input>
-            <input type="range" min ="0" max = "360" value = "0" step="0.1" class="range__hue range_filter">hue</input>
-            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__invert range_filter">invert</input>
-            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__opacity range_filter">opacity</input>
-            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__saturate range_filter">saturate</input>
-            <input type="range" min ="0" max = "100" value = "0" step="0.1" class="range__sepia range_filter">sepia</input>
-            <div class="btns">
-                <input class="btn_open" type="file" accept="image/*"></input>
+            <div class="range_bar">
+                <label class="nametag">blur</label>
+                <input type="range" min="0" max="100" value="0" step="0.1" class="range__blur range_filter"></input>
+            </div>
+            <div class="range_bar">
+                <label class="nametag">brightness</label>
+                <input type="range" min="0" max="100" value="0" step="0.1"
+                    class="range__brightness range_filter"></input>
+            </div>
+            <div class="range_bar">
+                <label class="nametag">contrast</label>
+                <input type="range" min="0" max="100" value="0" step="0.1" class="range__contrast range_filter"></input>
+            </div>
+            <div class="range_bar">
+                <label class="nametag">grayscale</label>
+                <input type="range" min="0" max="100" value="0" step="0.1"
+                    class="range__grayscale range_filter"></input>
+            </div>
+            <div class="range_bar">
+                <label class="nametag">hue</label>
+                <input type="range" min="0" max="360" value="0" step="0.1" class="range__hue range_filter"></input>
+            </div>
+            <div class="range_bar">
+                <label class="nametag">invert</label>
+                <input type="range" min="0" max="100" value="0" step="0.1" class="range__invert range_filter"></input>
+            </div>
+            <div class="range_bar">
+                <label class="nametag">opacity</label>
+                <input type="range" min="0" max="100" value="0" step="0.1" class="range__opacity range_filter"></input>
+            </div>
+            <div class="range_bar">
+                <label class="nametag">saturate</label>
+                <input type="range" min="0" max="100" value="0" step="0.1" class="range__saturate range_filter"></input>
+            </div>
+            <div class="range_bar">
+                <label class="nametag">sepia</label>
+                <input type="range" min="0" max="100" value="0" step="0.1" class="range__sepia range_filter"></input>
+            </div>
+
+        </div>
+        <div class="btns">
+            <input class="btn_open" type="file" accept="image/*"></input>
+            <div class="button">
                 <button class="btn_reset">reset</button>
                 <button class="btn_save">save</button>
             </div>
@@ -33,6 +66,7 @@
 
 
     <script src="script.js"></script>
+    <!-- <script src="testing.js"></script> -->
 </body>
 
 </html>
